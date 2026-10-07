@@ -1,0 +1,1381 @@
+/* ========================================
+   MEMBERSHIP
+======================================== */
+
+.membership {
+  position: relative;
+
+  width: 100%;
+  overflow: hidden;
+
+  padding:
+    clamp(100px, 10vw, 165px)
+    clamp(22px, 5vw, 80px)
+    clamp(90px, 9vw, 145px);
+
+  background:
+    radial-gradient(
+      circle at 12% 70%,
+      rgba(226, 27, 22, 0.08),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #080808 0%,
+      #050505 50%,
+      #080808 100%
+    );
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.055);
+}
+
+
+/* ========================================
+   BACKGROUND
+======================================== */
+
+.membership__grid-bg {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.13;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  mask-image:
+    linear-gradient(
+      180deg,
+      black,
+      transparent 90%
+    );
+
+  -webkit-mask-image:
+    linear-gradient(
+      180deg,
+      black,
+      transparent 90%
+    );
+}
+
+
+.membership__red-glow {
+  position: absolute;
+
+  left: -10%;
+  bottom: 10%;
+
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(226, 27, 22, 0.07);
+
+  filter: blur(130px);
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.membership__container {
+  position: relative;
+  z-index: 2;
+
+  width: min(100%, 1500px);
+
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.membership__header {
+  margin-bottom:
+    clamp(55px, 6vw, 90px);
+}
+
+
+.membership__eyebrow {
+  margin-bottom:
+    clamp(25px, 3vw, 42px);
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  color:
+    rgba(242, 242, 240, 0.42);
+
+  font-size: 0.58rem;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+
+.membership__eyebrow > span {
+  color: var(--red);
+
+  font-family:
+    var(--font-display);
+
+  font-size: 0.9rem;
+
+  letter-spacing: 0.06em;
+}
+
+
+.membership__eyebrow i {
+  width: 34px;
+  height: 1px;
+
+  background: var(--red);
+
+  box-shadow:
+    0 0 8px rgba(226, 27, 22, 0.6);
+}
+
+
+.membership__eyebrow p {
+  margin: 0;
+}
+
+
+/* ========================================
+   HEADING
+======================================== */
+
+.membership__heading-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(260px, 350px);
+
+  align-items: end;
+
+  gap: 60px;
+}
+
+
+.membership__title {
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family:
+    var(--font-display);
+
+  font-size:
+    clamp(4.7rem, 8vw, 9rem);
+
+  font-weight: 900;
+
+  line-height: 0.76;
+
+  letter-spacing: -0.045em;
+
+  text-transform: uppercase;
+}
+
+
+.membership__title-line {
+  display: block;
+
+  overflow: hidden;
+
+  padding:
+    0 0.05em 0.08em 0;
+}
+
+
+.membership__title-line > span {
+  display: block;
+}
+
+
+.membership__title-line--red {
+  color: var(--red);
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.membership__intro {
+  padding-bottom: 8px;
+}
+
+
+.membership__intro > span {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: var(--red);
+
+  font-size: 0.52rem;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+
+.membership__intro p {
+  margin: 0;
+
+  color:
+    rgba(242, 242, 240, 0.46);
+
+  font-size:
+    clamp(0.72rem, 0.8vw, 0.82rem);
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   MAIN BODY
+======================================== */
+
+.membership__body {
+  display: grid;
+
+  grid-template-columns:
+    minmax(330px, 0.8fr)
+    minmax(600px, 1.2fr);
+
+  min-height: 720px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  background: #080808;
+}
+
+
+/* ========================================
+   LEFT VISUAL
+======================================== */
+
+.membership__visual {
+  position: relative;
+
+  min-width: 0;
+  min-height: 720px;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  border-right:
+    1px solid rgba(255, 255, 255, 0.09);
+
+  background: #070707;
+}
+
+
+.membership__visual img {
+  position: absolute;
+  inset: 0;
+
+  z-index: -4;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transform: scale(1.025);
+
+  filter:
+    saturate(0.85)
+    brightness(0.72)
+    contrast(1.08);
+
+  transition:
+    transform 1.2s cubic-bezier(.16, 1, .3, 1),
+    filter 0.7s ease;
+}
+
+
+.membership__visual:hover img {
+  transform: scale(1.065);
+
+  filter:
+    saturate(1)
+    brightness(0.79)
+    contrast(1.06);
+}
+
+
+.membership__visual-shade {
+  position: absolute;
+  inset: 0;
+
+  z-index: -3;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 5, 5, 0.12) 0%,
+      rgba(5, 5, 5, 0.04) 35%,
+      rgba(5, 5, 5, 0.38) 65%,
+      rgba(5, 5, 5, 0.98) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(5, 5, 5, 0.1),
+      transparent 65%
+    );
+}
+
+
+/* RED LIGHT */
+
+.membership__visual::after {
+  content: '';
+
+  position: absolute;
+
+  z-index: -2;
+
+  left: -30%;
+  bottom: -20%;
+
+  width: 110%;
+  height: 55%;
+
+  border-radius: 50%;
+
+  background:
+    rgba(226, 27, 22, 0.16);
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+
+/* VISUAL TOP */
+
+.membership__visual-top {
+  position: absolute;
+
+  top: 28px;
+  left: 28px;
+  right: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+.membership__visual-top span {
+  color: var(--red);
+
+  font-family:
+    var(--font-display);
+
+  font-size: 1rem;
+  font-weight: 900;
+
+  letter-spacing: 0.05em;
+}
+
+
+.membership__visual-top p {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.42);
+
+  font-size: 0.4rem;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+/* VISUAL CONTENT */
+
+.membership__visual-content {
+  position: absolute;
+
+  left:
+    clamp(24px, 3vw, 42px);
+
+  right:
+    clamp(24px, 3vw, 42px);
+
+  bottom:
+    clamp(34px, 4vw, 55px);
+}
+
+
+.membership__visual-content > span {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: var(--red);
+
+  font-size: 0.48rem;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+
+.membership__visual-content h3 {
+  margin: 0;
+
+  max-width: 500px;
+
+  display: flex;
+  flex-direction: column;
+
+  color: var(--white);
+
+  font-family:
+    var(--font-display);
+
+  font-size:
+    clamp(3.3rem, 4.8vw, 5.6rem);
+
+  font-weight: 900;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.04em;
+
+  text-transform: uppercase;
+}
+
+
+.membership__visual-content h3 strong {
+  color: var(--red);
+
+  font-weight: 900;
+}
+
+
+.membership__visual-content > p {
+  margin:
+    20px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.5);
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+.membership__visual-edge {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: var(--red);
+
+  box-shadow:
+    0 0 20px rgba(226, 27, 22, 0.75);
+}
+
+
+/* ========================================
+   PLANS WRAPPER
+======================================== */
+
+.membership__plans {
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-rows:
+    repeat(3, minmax(0, 1fr));
+
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  gap: 1px;
+}
+
+
+/* ========================================
+   PLAN
+======================================== */
+
+.membership-plan {
+  position: relative;
+
+  min-width: 0;
+
+  padding:
+    clamp(25px, 2.7vw, 38px);
+
+  display: grid;
+
+  grid-template-columns:
+    45px
+    minmax(0, 1fr)
+    minmax(150px, 190px);
+
+  align-items: center;
+
+  gap:
+    clamp(18px, 2.5vw, 38px);
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      #090909,
+      #070707
+    );
+
+  transition:
+    background 0.4s ease;
+}
+
+
+/* PLAN RED HOVER GLOW */
+
+.membership-plan::before {
+  content: '';
+
+  position: absolute;
+
+  right: -10%;
+  bottom: -100%;
+
+  width: 50%;
+  height: 180%;
+
+  border-radius: 50%;
+
+  background:
+    rgba(226, 27, 22, 0.08);
+
+  filter: blur(75px);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.4s ease;
+}
+
+
+.membership-plan:hover::before {
+  opacity: 1;
+}
+
+
+.membership-plan:hover {
+  background:
+    linear-gradient(
+      90deg,
+      #0b0b0b,
+      #090707
+    );
+}
+
+
+/* FEATURED */
+
+.membership-plan--featured {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(226, 27, 22, 0.075),
+      #080808 45%
+    );
+}
+
+
+.membership-plan--featured::after {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 3px;
+  height: 100%;
+
+  background: var(--red);
+
+  box-shadow:
+    0 0 18px rgba(226, 27, 22, 0.7);
+}
+
+
+/* ========================================
+   PLAN NUMBER
+======================================== */
+
+.membership-plan__number {
+  align-self: start;
+
+  padding-top: 4px;
+
+  color: var(--red);
+
+  font-family:
+    var(--font-display);
+
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+
+/* ========================================
+   PLAN MAIN
+======================================== */
+
+.membership-plan__main {
+  min-width: 0;
+}
+
+
+.membership-plan__heading > span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color:
+    rgba(255, 255, 255, 0.3);
+
+  font-size: 0.38rem;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+}
+
+
+.membership-plan__heading h3 {
+  margin: 0;
+
+  color: var(--white);
+
+  font-family:
+    var(--font-display);
+
+  font-size:
+    clamp(2.1rem, 3vw, 3.5rem);
+
+  font-weight: 900;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.035em;
+
+  text-transform: uppercase;
+}
+
+
+.membership-plan--featured
+.membership-plan__heading h3 {
+  color: var(--red);
+}
+
+
+/* DESCRIPTION */
+
+.membership-plan__description {
+  max-width: 500px;
+
+  margin:
+    12px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.4);
+
+  font-size: 0.6rem;
+
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   FEATURES
+======================================== */
+
+.membership-plan__features {
+  margin:
+    15px 0 0;
+
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px 18px;
+
+  list-style: none;
+}
+
+
+.membership-plan__features li {
+  color:
+    rgba(255, 255, 255, 0.56);
+
+  font-size: 0.47rem;
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+}
+
+
+.membership-plan__features li span {
+  margin-right: 6px;
+
+  color: var(--red);
+
+  font-weight: 900;
+}
+
+
+/* ========================================
+   PRICE / ACTION
+======================================== */
+
+.membership-plan__action {
+  position: relative;
+
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  gap: 13px;
+}
+
+
+.membership-plan__popular {
+  position: absolute;
+
+  top: -27px;
+  right: 0;
+
+  color: var(--red);
+
+  font-size: 0.34rem;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.membership-plan__price {
+  display: flex;
+  align-items: flex-end;
+
+  gap: 7px;
+}
+
+
+.membership-plan__price strong {
+  color: var(--white);
+
+  font-family:
+    var(--font-display);
+
+  font-size:
+    clamp(2.2rem, 3vw, 3.3rem);
+
+  font-weight: 900;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.035em;
+}
+
+
+.membership-plan__price span {
+  padding-bottom: 3px;
+
+  color:
+    rgba(255, 255, 255, 0.3);
+
+  font-size: 0.34rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.membership-plan__button {
+  width: 100%;
+
+  padding:
+    13px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.13);
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color: var(--white);
+
+  font: inherit;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+
+.membership-plan__button span {
+  font-size: 0.4rem;
+  font-weight: 800;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+
+.membership-plan__button i {
+  color: var(--red);
+
+  font-size: 0.9rem;
+  font-style: normal;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.membership-plan__button:hover {
+  border-color: var(--red);
+
+  background: var(--red);
+}
+
+
+.membership-plan__button:hover i {
+  color: #ffffff;
+
+  transform:
+    translate(3px, -3px);
+}
+
+
+/* FEATURED BUTTON */
+
+.membership-plan--featured
+.membership-plan__button {
+  border-color: var(--red);
+
+  background: var(--red);
+}
+
+
+.membership-plan--featured
+.membership-plan__button:hover {
+  background: transparent;
+
+  color: var(--red);
+}
+
+
+.membership-plan--featured
+.membership-plan__button:hover i {
+  color: var(--red);
+}
+
+
+/* ========================================
+   BOTTOM LINE
+======================================== */
+
+.membership-plan__line {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: var(--red);
+
+  box-shadow:
+    0 0 14px rgba(226, 27, 22, 0.7);
+
+  transition:
+    width 0.6s cubic-bezier(.16, 1, .3, 1);
+}
+
+
+.membership-plan:hover
+.membership-plan__line {
+  width: 100%;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.membership__footer {
+  margin-top: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  color:
+    rgba(255, 255, 255, 0.28);
+
+  font-size: 0.42rem;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.membership__footer > div {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+
+.membership__footer i {
+  width: 30px;
+  height: 1px;
+
+  background:
+    rgba(255, 255, 255, 0.14);
+}
+
+
+.membership__footer p {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.2);
+}
+
+
+/* ========================================
+   LAPTOP
+======================================== */
+
+@media (max-width: 1200px) {
+
+  .membership__body {
+    grid-template-columns:
+      minmax(300px, 0.72fr)
+      minmax(560px, 1.28fr);
+  }
+
+
+  .membership-plan {
+    grid-template-columns:
+      35px
+      minmax(0, 1fr)
+      155px;
+
+    gap: 18px;
+
+    padding:
+      28px 24px;
+  }
+
+
+  .membership-plan__description {
+    font-size: 0.56rem;
+  }
+
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 950px) {
+
+  .membership__heading-grid {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+
+  .membership__intro {
+    max-width: 400px;
+  }
+
+
+  .membership__body {
+    grid-template-columns: 1fr;
+
+    min-height: 0;
+  }
+
+
+  .membership__visual {
+    min-height: 650px;
+
+    border-right: 0;
+
+    border-bottom:
+      1px solid rgba(255, 255, 255, 0.09);
+  }
+
+
+  .membership__visual-content h3 {
+    font-size:
+      clamp(4rem, 10vw, 6rem);
+  }
+
+
+  .membership__plans {
+    grid-template-rows: auto;
+  }
+
+
+  .membership-plan {
+    min-height: 260px;
+
+    grid-template-columns:
+      45px
+      minmax(0, 1fr)
+      minmax(160px, 190px);
+
+    padding:
+      32px 30px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+  .membership {
+    padding:
+      95px 18px
+      80px;
+  }
+
+
+  .membership__header {
+    margin-bottom: 45px;
+  }
+
+
+  .membership__title {
+    font-size:
+      clamp(3.8rem, 17vw, 5.8rem);
+  }
+
+
+  .membership__visual {
+    min-height:
+      min(650px, 145vw);
+  }
+
+
+  .membership__visual-top {
+    top: 22px;
+    left: 20px;
+    right: 20px;
+  }
+
+
+  .membership__visual-content {
+    left: 22px;
+    right: 22px;
+    bottom: 32px;
+  }
+
+
+  .membership__visual-content h3 {
+    font-size:
+      clamp(3.4rem, 14vw, 4.8rem);
+  }
+
+
+  .membership-plan {
+    min-height: 0;
+
+    padding:
+      27px 22px;
+
+    grid-template-columns:
+      35px
+      minmax(0, 1fr);
+
+    gap:
+      10px 15px;
+  }
+
+
+  .membership-plan__number {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+
+  .membership-plan__main {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+
+  .membership-plan__action {
+    grid-column:
+      1 / -1;
+
+    grid-row: 2;
+
+    margin-top: 18px;
+
+    padding-left: 50px;
+
+    align-items: flex-start;
+  }
+
+
+  .membership-plan__price {
+    margin-bottom: 4px;
+  }
+
+
+  .membership-plan__button {
+    max-width: 100%;
+  }
+
+
+  .membership-plan__popular {
+    position: static;
+
+    margin-bottom: -3px;
+  }
+
+
+  .membership-plan__features {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 8px 14px;
+  }
+
+
+  .membership__footer {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 13px;
+  }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 420px) {
+
+  .membership {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
+  .membership__eyebrow {
+    gap: 10px;
+
+    font-size: 0.5rem;
+  }
+
+
+  .membership__title {
+    font-size:
+      clamp(3.4rem, 17vw, 4.7rem);
+  }
+
+
+  .membership__visual {
+    min-height: 520px;
+  }
+
+
+  .membership__visual-content h3 {
+    font-size:
+      clamp(3rem, 14vw, 4rem);
+  }
+
+
+  .membership-plan {
+    padding:
+      25px 18px;
+
+    grid-template-columns:
+      30px
+      minmax(0, 1fr);
+  }
+
+
+  .membership-plan__action {
+    padding-left: 45px;
+  }
+
+
+  .membership-plan__heading h3 {
+    font-size:
+      clamp(2.2rem, 11vw, 3rem);
+  }
+
+
+  .membership-plan__features {
+    grid-template-columns: 1fr;
+  }
+
+
+  .membership__footer > div {
+    flex-wrap: wrap;
+  }
+
+}
+
+
+/* ========================================
+   VERY SMALL MOBILE
+======================================== */
+
+@media (max-width: 360px) {
+
+  .membership__visual {
+    min-height: 485px;
+  }
+
+
+  .membership__visual-content {
+    left: 18px;
+    right: 18px;
+  }
+
+
+  .membership-plan {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
+  .membership-plan__action {
+    padding-left: 42px;
+  }
+
+}
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .membership__eyebrow,
+  .membership__title-line > span,
+  .membership__intro,
+  .membership__visual,
+  .membership-plan {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+
+  .membership__visual img,
+  .membership-plan,
+  .membership-plan__line,
+  .membership-plan__button,
+  .membership-plan__button i {
+    transition: none;
+  }
+
+}
